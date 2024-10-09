@@ -15,11 +15,14 @@ int main(){
         printf("Alguem nao e zero\n");
     }
 
+    char f = a > b ? "M" : "m";
+
     printf("a: %d\n", a);
     printf("b: %ld\n", b);
     printf("c: %f\n", c);
     printf("d: %f\n", d);
     printf("e: %c\n", e);
+    printf("f: %c\n", f);
 
     return 0;
 }
