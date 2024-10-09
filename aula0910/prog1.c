@@ -15,7 +15,7 @@ int main(){
         printf("Alguem nao e zero\n");
     }
 
-    char f = a > b ? "M" : "m";
+    char f = (a > 10) ? "M" : "m"; //fix it
 
     printf("a: %d\n", a);
     printf("b: %ld\n", b);
