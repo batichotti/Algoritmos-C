@@ -11,11 +11,15 @@ int main(){
     scanf(" %d", &a);
     scanf(" %d %ld", &a, &b);
 
+    if (a || b){
+        printf("Alguem nao e zero\n");
+    }
+
     printf("a: %d\n", a);
-    printf("a: %ld\n", b);
-    printf("a: %f\n", c);
-    printf("a: %f\n", d);
-    printf("a: %c\n", e);
+    printf("b: %ld\n", b);
+    printf("c: %f\n", c);
+    printf("d: %f\n", d);
+    printf("e: %c\n", e);
 
     return 0;
 }
