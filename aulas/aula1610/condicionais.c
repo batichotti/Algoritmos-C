@@ -14,4 +14,5 @@ int main(){
         printf("a é deveras grande\n");
     }
 
+    return 0;
 }
