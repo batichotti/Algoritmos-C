@@ -7,18 +7,20 @@ int main(){
         printf("i: %d\n", i);
     }
 
-    // printf("\n");
+    // printf("\n Laco infinito \n");
 
     // for (int i = 0; i < 10; i++){
     //     printf("i: %d\n", i);
     //     i--;
     // }
     
-    printf("\n");
+    printf("\n Agora com while \n");
 
-    while (j != 0){
-        printf("j:\n> ");
-        scanf(" %d", &j);
+    int i = 0;
+
+    while (i < 10){
+        printf("i-> %d\n", i);
+        i++;
     }
 
     return 0;
