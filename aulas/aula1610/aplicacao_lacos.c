@@ -6,7 +6,7 @@ int main(){
     int valor;
     int soma = 0;
 
-    printf("Insira valores e descubra sua soma! (0 para ver a soma)\n");
+    printf("Insira valores e descubra sua soma! (0 para obter a soma)\n");
 
     printf("Informe seu valor:\n> ");
     scanf(" %d", &valor);
