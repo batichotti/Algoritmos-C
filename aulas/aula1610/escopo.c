@@ -1,8 +1,14 @@
 #include <stdio.h>
 
+int fn(){
+    int a = 5;
+
+    return a;
+}
+
 int main(){
     {
-        int a = 5;
+        int a = fn();
         printf("%d\n", a);
         {
             int a = 2;
