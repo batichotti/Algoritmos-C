@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-//declaração prematura:
-
-int max(int a, int b);
+int max(int a, int b); //declaração prematura
 
 int max(int a, int b){
     if (a > b){
