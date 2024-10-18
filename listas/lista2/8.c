@@ -3,7 +3,7 @@
 int main(){
     int num, escopo;
 
-    printf("Insira um valor de até 4 digitos:\n> ");
+    printf("Insira um valor de ate 4 digitos:\n> ");
     scanf(" %d", &num);
 
     if (num > 9999){
@@ -19,33 +19,63 @@ int main(){
     escopo = num/1000;
     if(escopo > 0){
         if(escopo == 1){
-            printf("Mil");   
+            printf("Um");   
         } else if(escopo == 2){
-            printf("Dois Mil");   
+            printf("Dois");   
         } else if(escopo == 3){
-            printf("Tres Mil");   
+            printf("Tres");   
         } else if(escopo == 4){
-            printf("Quatro Mil");   
+            printf("Quatro");   
         } else if(escopo == 5){
-            printf("Cinco Mil");   
+            printf("Cinco");   
         } else if(escopo == 6){
-            printf("Seis Mil");   
+            printf("Seis");   
         } else if(escopo == 7){
-            printf("Sete Mil");   
+            printf("Sete");   
         } else if(escopo == 8){
-            printf("Oito Mil");   
+            printf("Oito");   
         } else {
-            printf("Nove Mil");   
+            printf("Nove");
         }
 
-        printf(" ");
+        printf(" Mil");
     }
 
-    escopo = (num-escopo*1000)/100;
+    escopo = (num - escopo*1000)/100;
     if(escopo > 0){
-        if(escopo == 1){
-            escopo = escopo - 10;
+        if ((num - (num/1000)*1000 - ((num - (num/1000)*1000)/10)*10 ) == 0) {
+            printf(" e");
+        }
 
+        if(escopo == 1){
+            printf(" Cento");
+        } else if(escopo == 2){
+            printf(" Duzentos");   
+        } else if(escopo == 3){
+            printf(" Trezentos");   
+        } else if(escopo == 4){
+            printf(" Quatrocentos");   
+        } else if(escopo == 5){
+            printf(" Quinhentos");   
+        } else if(escopo == 6){
+            printf(" Seiscentos");   
+        } else if(escopo == 7){
+            printf(" Setecentos");   
+        } else if(escopo == 8){
+            printf(" Oitocentos");   
+        } else {
+            printf(" Novecentos");
+        }
+    }
+    
+    escopo = (num - (num/1000)*1000 - (escopo*100))/10;
+
+    if (escopo > 0) {
+        if ((num - (num/1000) - escopo*100) > 0){
+            printf(" e ");
+        }
+        if(escopo == 1){
+            escopo = (num - (num/1000) - (escopo*100) - 10);
             if (escopo == 0){
                 printf("Dez");
             } if(escopo == 1){
@@ -68,47 +98,51 @@ int main(){
                 printf("Dezenove");
             }
 
+
         } else if(escopo == 2){
-            printf("Duzentos");   
+            printf("Vinte");
         } else if(escopo == 3){
-            printf("Trezentos");   
+            printf("Trinta");   
         } else if(escopo == 4){
-            printf("Quatrocentos");   
+            printf("Quarenta");   
         } else if(escopo == 5){
-            printf("Quinhentos");   
+            printf("Cinquenta");   
         } else if(escopo == 6){
-            printf("Seiscentos");   
+            printf("Sessenta");   
         } else if(escopo == 7){
-            printf("Setecentos");   
+            printf("Setenta");   
         } else if(escopo == 8){
-            printf("Oitocentos");   
+            printf("Oitenta");   
         } else {
-            printf("Novecentos");
+            printf("Noventa");
+        }
+    }
+
+    escopo = (num - (num/1000)*1000 - ((num-(num/1000)*1000)/100)*100 - ((num - (num/1000)*1000 - ((num-(num/1000)*1000)/100)*100)/10)*10 );
+    if (escopo > 0){ 
+
+        if(num > 19){
+            printf(" e ");
         }
 
-        printf(" e ");
-    }
-    
-    escopo = (num - (num/1000) - escopo)/10;
-    if (escopo > 0) {
-        if(num == 1){
-            printf("");   
-        } else if(num == 2){
-            printf("Duzentos");   
-        } else if(num == 3){
-            printf("Trezentos");   
-        } else if(num == 4){
-            printf("Quatrocentos");   
-        } else if(num == 5){
-            printf("Quinhentos");   
-        } else if(num == 6){
-            printf("Seiscentos");   
-        } else if(num == 7){
-            printf("Setecentos");   
-        } else if(num == 8){
-            printf("Oitocentos");   
+        if(escopo == 1){
+            printf("Um");
+        } else if(escopo == 2){
+            printf("Dois");   
+        } else if(escopo == 3){
+            printf("Tres");   
+        } else if(escopo == 4){
+            printf("Quatro");   
+        } else if(escopo == 5){
+            printf("Cinco");   
+        } else if(escopo == 6){
+            printf("Seis");   
+        } else if(escopo == 7){
+            printf("Sete");   
+        } else if(escopo == 8){
+            printf("Oito");   
         } else {
-            printf("Novecentos");
+            printf("Nove");   
         }
     }
 
