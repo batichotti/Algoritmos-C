@@ -1,4 +1,7 @@
 #include <stdio.h>
+/*
+Escreva um programa que lê quatro números inteiros e informa o maior digitado.
+*/
 
 int main(){
     int a, b, c, d;

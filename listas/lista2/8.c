@@ -1,4 +1,9 @@
 #include <stdio.h>
+/*
+Escreva um programa que lê um inteiro de até 4 dígitos (positivo ou negativo) e o imprime por
+extenso. OBS: para extrair os dígitos do número, utilize resto por 10 (para obter a unidade) e
+divisão por 10 (para remover a unidade).
+*/
 
 int main(){
     int num, escopo;

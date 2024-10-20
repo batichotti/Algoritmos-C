@@ -1,4 +1,9 @@
 #include <stdio.h>
+/*
+Escreva uma calculadora simples: faz a leitura de um operador char (+ - * / %), bem como, os
+valores inteiros A e B. Então, o programa deve mostrar a expressão e o resultado (com dois dígitos
+de precisão).
+*/
 
 int main(){
     char operador;

@@ -1,4 +1,7 @@
 #include <stdio.h>
+/*
+Escreva um programa que lê três números inteiros e os escreve em ordem crescente.
+*/
 
 int main(){
     int a, b, c;

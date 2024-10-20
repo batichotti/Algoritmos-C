@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/*
+Escreva um programa que lê um número de 0 a 9 e o imprime por extenso. O programa deve
+validar a entrada (0 <= x <= 9) e informar erro, caso ocorra.
+*/
 int main(){
     int num;
     printf("Insira um numero:\n> ");
