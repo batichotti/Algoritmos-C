@@ -10,7 +10,7 @@ int main(){
 
     int v3[] = {1,552,0,-1,7,99};
 
-    for (size_t i = 0; i < 10; i++){
+    for (int i = 0; i < 10; i++){
         v1[i] = 9;
     }
 
