@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 void print_vector(int length, int* vector){
-
     for (int i = 0; i < length; i++){
         printf("%d\n", vector[i]);
     }
@@ -14,13 +13,11 @@ void set_vector(int n, int* vector){
     for (int i = 0; i < n; i++){
         vector[i] = rand() % 10;
     }
-
     printf("\n");
 }
 
 int main(){
     int n;
-
     printf("> ");
     scanf(" %d", &n);
 
