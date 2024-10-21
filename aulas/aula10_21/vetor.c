@@ -6,7 +6,7 @@ int main(){
     int n2;
     printf("tamanho de v2> ");
     scanf(" %d", &n2);
-    int v2[n2]; // variavel de tamanho variavel
+    int v2[n2]; // vetor de tamanho variavel
 
     int v3[] = {1,552,0,-1,7,99};
 
