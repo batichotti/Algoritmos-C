@@ -6,6 +6,7 @@ int main(){
 
     for (int i = 0; i < 10; i++){
         v1[i] = rand() % 10; // [0..n-1], onde n é o lado direito do %
+        v1[i] = (rand() % 5) + 1; // [1..5]
     }
 
     //imprime o vetor
