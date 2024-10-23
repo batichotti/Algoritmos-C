@@ -6,7 +6,6 @@ void print_even(int n, int * vector){
         if (vector[i] % 2 == 0){
                 printf("%d \n", vector[i]);
         }
-        
     }
 }
 
