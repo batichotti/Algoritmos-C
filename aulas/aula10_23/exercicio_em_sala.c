@@ -8,7 +8,7 @@ void imprime_vetor(int n, int* vector){
 
 int main(){
     int n = 20;
-    int v[n]; //load with memory trash
+    int v[n]; //loaded with memory trash
 
     imprime_vetor(n, v);
     return 0;
