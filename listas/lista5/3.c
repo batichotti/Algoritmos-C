@@ -8,7 +8,7 @@ int find_max(int n, int* vector){
     if (n > 0){
         max = vector[0];
         for (int i = 0; i < n; i++){
-            if (max > vector[i]){
+            if (max < vector[i]){
                 max = vector[i];
             }
         }
