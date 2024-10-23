@@ -9,7 +9,22 @@ int find_max(int n, int* vector){
         max = vector[0];
         for (int i = 0; i < n; i++){
             if (max < vector[i]){
-                max = vector[i];// if you want the position, just store the value of i
+                max = vector[i];
+            }
+        }
+    }
+
+    return max;
+}
+
+int find_max_position(int n, int* vector){
+    int max;
+    
+    if (n > 0){
+        max = 0;
+        for (int i = 0; i < n; i++){
+            if (vector[max] < vector[i]){
+                max = i;
             }
         }
     }
