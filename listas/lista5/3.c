@@ -28,5 +28,6 @@ int main(){
     }
 
     int max = find_max(n, v);
+    printf("Max: %d\n", max);
     return 0;
 }
