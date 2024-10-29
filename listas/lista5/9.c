@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+/*
+Escreva uma função que recebe dois vetores (vet1 e vet2) de mesmo tamanho n. A função deve copiar todos os elementos de vet1 para vet2
+*/
 
 void vector_copy(int n, int* vector_to_overwrite, int* vector_to_copy){
     if (n>0){

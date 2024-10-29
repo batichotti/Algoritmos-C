@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
+/*
+Escreva uma função que recebe um vetor vet de tamanho n e devolve o maior valor contido no mesmo
+*/
 
 int find_max(int n, int* vector){
     int max = INT_MIN;
