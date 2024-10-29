@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <limits.h>
 /*
-Escreva uma função que verifica se os elementos de um vetor, passado como parâmetro, estão em ordem crescente. A função deve retornar 1 (true), caso os elementos estejam dispostos em ordem crescente, ou 0 (false), em caso contrário.
+Escreva uma função que verifica se os elementos de um vetor, passado como
+parâmetro, estão em ordem crescente. A função deve retornar 1 (true),
+caso os elementos estejam dispostos em ordem crescente, ou 0 (false),
+em caso contrário.
 */
 
 int is_ascending(int n, int* vector){

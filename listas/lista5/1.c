@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
-Escreva uma função que recebe um vetor vet de tamanho n e imprime apenas os valores pares.
+Escreva uma função que recebe um vetor vet de tamanho n e imprime apenas os
+valores pares.
 */
 
 void print_even(int n, int * vector){

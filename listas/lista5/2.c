@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
-Escreva uma função que recebe um vetor vet de tamanho n contendo números inteiros positivos e negativos. A função deve inverter o sinal dos números negativos, passando-os para positivo
+Escreva uma função que recebe um vetor vet de tamanho n contendo números
+inteiros positivos e negativos. A função deve inverter o sinal dos números
+ negativos, passando-os para positivo
 */
 
 void set_positive(int n, int* vector){
