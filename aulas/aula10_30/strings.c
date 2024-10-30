@@ -6,7 +6,7 @@ int length(char* array){
     return i;
 }
 
-void print_str(char* str){
+void print_str(const char* str){
     for (int i = 0; str[i] != 0; i++){
         printf("%c-", str[i]);
     }
