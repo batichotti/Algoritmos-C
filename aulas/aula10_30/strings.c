@@ -1,9 +1,15 @@
 #include <stdio.h>
 
+int length(char* array){
+    int i;
+    for (i = 0; array[i] != 0; i++){}
+    i--;
+    return i;
+}
+
 int main(){
     char str[] = "Computaria"; //10 + \0
     char another_str[10]; //9 letras + \0
-    another_str[2] = 'K';
     //veteres de caracteres não tem \0 no final, string tem o \0
     char string_burra[] = {'O', 'i', 0};
 
@@ -23,6 +29,8 @@ int main(){
         printf("%c-", str[i]);
     }
     printf("%c \n", 8);
+
+    printf("%d", length(str));
 
     return 0;
 }
