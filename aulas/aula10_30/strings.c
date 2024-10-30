@@ -3,7 +3,6 @@
 int length(char* array){
     int i;
     for (i = 0; array[i] != 0; i++){}
-    i--;
     return i;
 }
 
