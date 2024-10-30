@@ -13,8 +13,16 @@ void print_str(char* str){
     printf("\b \n");
 }
 
+void replace_spaces(char* str){
+    for (int i = 0; str[i] != 0; i++){
+        if (str[i] == ' '){
+            str[i] = '_';
+        }
+    }
+}
+
 int main(){
-    char str[] = "Computaria"; //10 + \0
+    char str[] = "Computaria eh a verdade e o caminho"; //35 + \0
     char another_str[10]; //9 letras + \0
     //veteres de caracteres não tem \0 no final, string tem o \0
     char string_burra[] = {'O', 'i', 0};
@@ -31,7 +39,9 @@ int main(){
     // }
     // printf("\n");
 
-    printf("%d", length(str));
+    replace_spaces(str);
+    printf("%s\n", str);
+    printf("%d\n", length(str));
 
     return 0;
 }
