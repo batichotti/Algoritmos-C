@@ -20,7 +20,7 @@ int main(){
     char string_burra[] = {'O', 'i', 0};
 
     printf("%s\n", str);
-    printf("%s\n", string_burra);
+    print_str(str);
 
     // for (int i = 0; str[i] != 0; i++){
     //     if (str[i+1] == 0){
