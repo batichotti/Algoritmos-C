@@ -23,7 +23,7 @@ int main(){
     int v[n];
 
     int n2;
-    printf("Length for the first vector\n> ");
+    printf("Length for the second vector\n> ");
     scanf(" %d", &n2);
     int v2[n2];
 
