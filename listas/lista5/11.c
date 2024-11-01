@@ -17,7 +17,6 @@ void vector_remove(int n, int* vector, int pos){
 int main(){
     int n = 8;
     int v[n];
-    int reversed[n];
 
     for (int i = 0; i < n; i++){
         v[i] = i;
