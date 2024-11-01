@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 /*
 Escreva uma função que recebe um vetor contendo números inteiros. Ela deve determinar o
 segmento de soma máxima e imprimi-lo.
