@@ -21,7 +21,6 @@ void min_bills(int value, int n, int* bills){
                 bills[k+1] = escopo;
             }
         }
-        
     }
 
     for (int i = n-1; i >= 0; i--){
