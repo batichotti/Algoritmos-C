@@ -6,7 +6,7 @@ poderá conter letras maiúsculas e símbolos.
 
 void string_to_upper_case(char* str){
     for (int i = 0; str[i] != 0; i++){
-        if ( str[i] >= 65 && str[i] <= 90 ){
+        if ( str[i] >= 97 && str[i] <= 122 ){
             str[i] = str[i] - 'a' + 'A';
         }
     }
@@ -17,9 +17,7 @@ int main(){
 
     string_to_upper_case(str);
 
-    for (int i = 0; str[i] != 0; i++){
-        printf("%c", str[i]);
-    }
+    printf("%s", str);
 
     return 0;
 }
