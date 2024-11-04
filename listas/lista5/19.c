@@ -8,14 +8,33 @@ com 0.
 */
 
 void vector_intersection(int n1, int* v1, int n2, int* v2, int* v3){
-    
-    for (int i = 0; i < n1; i++){
-        for (int k = 0; k < n2; k++){
-            /* code */
-        }
+    int n3 = n1;
+    if (n2 < n1){
+        n3 = n2;
     }
     
+    int v3_pos = 0;
 
+    for (int i = 0; i < n1; i++){
+        for (int k = 0; k < n2; k++){
+
+            if (v1[i] == v2[k]){
+
+                int already_exist = 0;
+                for (int y = 0; y < n3; y++){
+                    if(v1[i] == v3[y]){
+                        already_exist = 1;
+                        break;
+                    }
+                }
+                if (already_exist == 0){
+                    v3[v3_pos] = v1[i];
+                }
+                
+            }
+        
+        }
+    }
 }
 
 int main(){
