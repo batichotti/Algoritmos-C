@@ -8,16 +8,12 @@ com 0.
 */
 
 void vector_intersection(int n1, int* v1, int n2, int* v2, int* v3){
-    int nf = n1;
-    if (n1 > nf){
-        nf = n2;
-    }
     
-
-    for (int i = 0; i < nf; i++){
-        /* code */
+    for (int i = 0; i < n1; i++){
+        for (int k = 0; k < n2; k++){
+            /* code */
+        }
     }
-    
     
 
 }
