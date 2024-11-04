@@ -19,7 +19,7 @@ void string_to_upper_case(char* str){
     }
 }
 
-void duplica_string(char* destino, char* objeto){
+void duplica_string(char* destino, const char* objeto){
     
     int len_1;
     int len_2;
@@ -29,10 +29,12 @@ void duplica_string(char* destino, char* objeto){
     if (len_1 != len_2) {
         printf("Vetores de tamanhos diferentes, tarefa abortada.\n");
     } else {
-        for (int i = 0; objeto[i] != 0; i++){
+        int i;
+        for (i = 0; objeto[i] != 0; i++){
             destino[i] = objeto[i];
         }
-    }
+        destino[i] = 0;
+    }   
 }
 
 
@@ -44,6 +46,7 @@ int strcmp_plus(const char* str1, const char* str2){
     
     char str1_copy[i];
     char str2_copy[j];
+
     duplica_string(str1_copy, str1);
     duplica_string(str2_copy, str2);
 
