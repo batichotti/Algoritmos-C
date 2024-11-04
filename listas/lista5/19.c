@@ -13,7 +13,7 @@ void vector_intersection(int n1, int* v1, int n2, int* v2, int* v3){
         n3 = n2;
     }
     
-    int v3_pos = 0;
+    int v3_idx = 0;
 
     for (int i = 0; i < n1; i++){
         for (int k = 0; k < n2; k++){
@@ -21,16 +21,19 @@ void vector_intersection(int n1, int* v1, int n2, int* v2, int* v3){
             if (v1[i] == v2[k]){
 
                 int already_exist = 0;
+
                 for (int y = 0; y < n3; y++){
                     if(v1[i] == v3[y]){
                         already_exist = 1;
                         break;
                     }
                 }
+
                 if (already_exist == 0){
-                    v3[v3_pos] = v1[i];
+                    v3[v3_idx] = v1[i];
+                    v3_idx++;
                 }
-                
+
             }
         
         }
@@ -38,33 +41,38 @@ void vector_intersection(int n1, int* v1, int n2, int* v2, int* v3){
 }
 
 int main(){
-    int n = rand() % 10 + 1;
     int n1 = rand() % 10 + 1;
-
-    int v[n];
-    for (int i = 0; i < n; i++){
-        v[i] = rand() % 10;
-    }
+    int n2 = rand() % 10 + 1;
 
     int v1[n1];
     for (int i = 0; i < n1; i++){
         v1[i] = rand() % 10;
     }
 
+    int v2[n2];
+    for (int i = 0; i < n2; i++){
+        v2[i] = rand() % 10;
+    }
+
+    // int v1[5] = {1,1,1,3,5};
+    // int v2[2] = {1,5};
+    // int n1 = 5;
+    // int n2 = 2;
+
     int nf = n1;
-    if (n1 > n){
-        nf = n;
+    if (n1 > n2){
+        nf = n2;
     }
 
     int v_final[nf];
     
-    for (int i = 0; i < n+n1; i++){
+    for (int i = 0; i < nf; i++){
         v_final[i] = 0;
     }
     
-    vector_intersection(n, v, n1, v1, v_final);
+    vector_intersection(n1, v1, n2, v2, v_final);
 
-    for (int i = 0; i < n+n1; i++){
+    for (int i = 0; i < nf; i++){
         printf("%d\n", v_final[i]);
     }
 
