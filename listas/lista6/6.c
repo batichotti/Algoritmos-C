@@ -10,7 +10,7 @@ int count_words(const char* str){
     int words = 0;
     if ( str_len > 0 ){
       for (int i = 0; str[i] != 0; i++){
-        if (str[i] == " ") {
+        if (str[i] == ' ') {
             words++;
         }
       }   
@@ -21,13 +21,19 @@ int count_words(const char* str){
 
 int count_words_plus(const char* str){
     int words = 0;
-    if (str[0] != " " && str[0] != 0){ // (strlen(str) > 0)
+    if (str[0] != ' ' && str[0] != 0){ // (strlen(str) > 0)
         words++;
     }
+    for (int i = 0; str[i+1] != 0; i++){
+        if (str[i] == ' ' && str[i+1] != ' '){
+            words++;
+        }
+    }
 
+    return words;
 }
 
 int main(){
-    printf("%d", strcmp_plus("JOanna", "joanna"));
+    printf("%d", count_words_plus(" Eu to em   todo lugar"));
     return 0;
 }
