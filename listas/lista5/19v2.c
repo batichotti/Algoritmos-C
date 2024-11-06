@@ -19,15 +19,10 @@ int in(int n, int* v, int elem){
 void intersect(int n1, int *v1, int n2, int *v2, int *v3){
     int v3_controller = 0;
 
-    int n3 = n1;
-    if (n1 > n2) n3 = n2;
-
     for (int i = 0; i < n1; i++){
-        if (in(n2, v2, v1[i])){
-            if (in(n3, v3, v1[i])){
-                v3[v3_controller] = v1[i];
-                v3_controller++;
-            }
+        if (in(n2, v2, v1[i]) && !(in(v3_controller, v3, v1[i]))){
+            v3[v3_controller] = v1[i];
+            v3_controller++;
         }
     }
 }
