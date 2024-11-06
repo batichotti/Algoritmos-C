@@ -24,14 +24,10 @@ void string_to_upper_case(char* str){
 }
 
 void string_count(const char* str){
-    char str_copy[strlen(str)];
     int counter[strlen(str)];
-    strcpy(str_copy, str);
-    
-    string_to_upper_case(str_copy);
 
     for (int i = 0; str[i] != 0; i++){  
-
+        
     }
 }
 
