@@ -16,8 +16,7 @@ void string_trim(char* str){
         }
     }
     
-    for (int i = 0; i < count; i++)
-    {
+    for (int i = 0; str[i] != 0; i++){
         /* code */
     }
     
