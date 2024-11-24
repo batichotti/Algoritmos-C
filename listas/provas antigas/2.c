@@ -6,7 +6,7 @@ por espaço e, os negativos, devem ser positivados e colocados entre parênteses
 vetor str possui espaço suficiente. Dica: para converter int ⇒ char, basta adicionar 48.
 */
 
-void integer_vector_to_string(int n, const int* v, char* str){
+void vec_to_str(int n, const int* v, char* str){
     
     int k = 0;
     for (int i = 0; i < n; i++){
@@ -30,7 +30,7 @@ int main() {
     int v[10] = {-1, 2, -3, 4, -5, 6, -7, 8, 9, 0};
     char str[100];
 
-    integer_vector_to_string(10, v, str);
+    vec_to_str(10, v, str);
 
     printf("%s", str);
 
