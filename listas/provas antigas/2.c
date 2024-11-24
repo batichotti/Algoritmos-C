@@ -1,6 +1,9 @@
 #include <stdio.h>
 /*
-transformar um vetor inteiro (valores em modulo ate 9) em string
+Escreva uma função que converte o conteúdo um vetor de inteiros vec, transformando-o em uma
+string, que deve ser armazenada em str. Na string resultante, os números devem ser separados
+por espaço e, os negativos, devem ser positivados e colocados entre parênteses. Considere que o
+vetor str possui espaço suficiente. Dica: para converter int ⇒ char, basta adicionar 48.
 */
 
 void integer_vector_to_string(int n, const int* v, char* str){
