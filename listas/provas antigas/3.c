@@ -8,7 +8,7 @@ b. Quando o número é -1, o próximo inteiro indica o número de fato e, o segu
 quantidade de repetições do mesmo
 */
 
-void descomprimir_vetor(int n, int* v);
+void uncompress(int n, int v[]);
 
 int main() {
     int v[10] = {1,2,3,-1,5,6,7,-1,9,8};
@@ -17,7 +17,7 @@ int main() {
     return 0;
 }
 
-void descomprimir_vetor(int n, int* v){
+void uncompress(int n, int v[]){
     for (int i = 0; i < n; i++){
         if (v[i] == -1){
             for (int j = 0; j < v[i+2]; j++){
