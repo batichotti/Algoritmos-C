@@ -26,10 +26,8 @@ char remove_palindrome(char* str) {
             str[(length/2)] = 0;
         } else {
             str[(length/2)+1] = 0;
-        }
-        
+        }   
     }
-    
 }
 
 int main() {
