@@ -20,7 +20,7 @@ char remove_palindrome(char* str) {
         }
     }
     
-    length++;//quantidade de letras
+    length++;
     if (boolean == '1'){
         if (length % 2 == 0){ // se é par
             str[(length/2)] = 0;
