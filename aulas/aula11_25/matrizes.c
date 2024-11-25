@@ -8,10 +8,11 @@ int main(){
         {4,5,6,7},
         {8,9,10,11}
     };
+    int rows = 3; int cols = 4;
 
-    for (int i = 0; i < 3; i++){ //linhas
-        for (int j = 0; j < 4; j++){ //colunas
-            printf("%2d ", v[i][j]);
+    for (int i = 0; i < rows; i++){ //linhas
+        for (int j = 0; j < cols; j++){ //colunas
+            printf("%*d ", 2, v[i][j]);
         }
         printf("\n");
     }
