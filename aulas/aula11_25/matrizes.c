@@ -22,5 +22,12 @@ int main(){
     // Matriz como parâmetro
     print_matriz(rows, cols, v);
 
+    //todo vetor de strings é uma matriz de caracteres
+    char v_str[4][5] = {"C++", "Java", "C#", "Lua"};
+
+    for (int i = 0; i < 4; i++){
+        printf("%s\n", v_str[i]);
+    }
+
     return 0;
 }
