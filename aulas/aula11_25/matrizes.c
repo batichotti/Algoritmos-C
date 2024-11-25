@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+void print_matriz(int r, int c, int v[r][c]){
+     for (int i = 0; i < r; i++){ //linhas
+        for (int j = 0; j < c; j++){ //colunas
+            printf("%*d ", 2, v[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 int main(){
 
     //Matriz
@@ -10,11 +19,8 @@ int main(){
     };
     int rows = 3; int cols = 4;
 
-    for (int i = 0; i < rows; i++){ //linhas
-        for (int j = 0; j < cols; j++){ //colunas
-            printf("%*d ", 2, v[i][j]);
-        }
-        printf("\n");
-    }
+    // Matriz como parâmetro
+    print_matriz(rows, cols, v);
+
     return 0;
 }
