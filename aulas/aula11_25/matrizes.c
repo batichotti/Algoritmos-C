@@ -11,7 +11,7 @@ int main(){
 
     for (int i = 0; i < 3; i++){ //linhas
         for (int j = 0; j < 4; j++){ //colunas
-            printf("%d ", v[i][j]);
+            printf("%2d ", v[i][j]);
         }
         printf("\n");
     }
