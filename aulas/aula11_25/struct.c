@@ -15,7 +15,7 @@ void print_person(Person p){
 
 int main(){
     Person p1 = {2, "Jhon Doe", "john.doe@email.com", "a2222222"};
-    Person p2;
+    Person p2 = p1;
 
     print_person(p1);
     print_person(p2);
