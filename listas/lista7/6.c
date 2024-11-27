@@ -15,7 +15,6 @@ void matrix_random(int rows, int cols, int m[rows][cols], int min, int max){
 }
 
 void print_matrix(int rows, int cols, int m[rows][cols]){
-
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < cols; j++){
             printf("%2d ", m[i][j]);
