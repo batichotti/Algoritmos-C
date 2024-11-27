@@ -5,28 +5,19 @@ Escreva uma função que inicia uma matriz com valores inteiros, iniciando em st
 com step.
 */
 
-void int_values(int rows, int cols, int m[rows][cols]){
-    int acumulador = 0;
-
+void int_values(int rows, int cols, int m[rows][cols], int start, int step){
+    int iterador = 0;
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < cols; j++){
-            acumulador += m[i][j];
+            m[i][j] = 10 + iterador*step;
+            iterador++;
         }
     }
-
-    float mean = (float) acumulador/(rows*cols);
-    
-    printf("Media: %f", mean);
-
 }
 
 int main(){
-    int matriz[3][3] = {
-        {1,2,3},
-        {4,5,6},
-        {7,8,9}
-    };
+    int matriz[3][3];
 
-    print_min_max(3,3,matriz);
+    int_values(3,3,matriz,10, 2);
     return 0;
 }
