@@ -18,7 +18,11 @@ void print_matrix(int rows, int cols, int m[rows][cols]){
 
 int main(){
 
-    int matriz[3][3] = {1,2,3,4,5,6,7,8,9};
+    int matriz[3][3] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
     print_matrix(3,3,matriz);
     return 0;
 }
