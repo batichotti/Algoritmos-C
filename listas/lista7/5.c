@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /*
-
+Escreva uma função que inicia uma matriz com valores inteiros, iniciando em start e progredindo
+com step.
 */
 
-void print_min_max(int rows, int cols, int m[rows][cols]){
+void int_values(int rows, int cols, int m[rows][cols]){
     int acumulador = 0;
 
     for (int i = 0; i < rows; i++){

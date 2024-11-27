@@ -16,7 +16,6 @@ float avg(int rows, int cols, int m[rows][cols]){
     float mean = (float) acumulador/(rows*cols);
     
     return mean;
-
 }
 
 int main(){
