@@ -4,7 +4,7 @@
 Escreva uma função que retorna a média aritmética simples de todos os elementos da matriz.
 */
 
-void print_min_max(int rows, int cols, int m[rows][cols]){
+float avg(int rows, int cols, int m[rows][cols]){
     int acumulador = 0;
 
     for (int i = 0; i < rows; i++){
@@ -15,7 +15,7 @@ void print_min_max(int rows, int cols, int m[rows][cols]){
 
     float mean = (float) acumulador/(rows*cols);
     
-    printf("Media: %f", mean);
+    return mean;
 
 }
 
@@ -26,6 +26,6 @@ int main(){
         {7,8,9}
     };
 
-    print_min_max(3,3,matriz);
+    avg(3,3,matriz);
     return 0;
 }
