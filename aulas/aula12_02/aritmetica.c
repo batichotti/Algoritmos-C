@@ -17,9 +17,9 @@ int main() {
     printf("*p -> %d\n", *p);
     
     for (int i = 0; i < 7; i++){
-        printf("%d \n", *p);
+        printf("%d ", *p); // ou *(v + i)
         p++;
     }
-    
+    printf("\n");
     return 0;
 }
