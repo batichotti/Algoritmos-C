@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /*
-
+Escreva uma função que recebe uma matriz e coloca as somas de cada linha na última coluna.
 */
 
 void matrix_random(int rows, int cols, int m[rows][cols], int min, int max){
