@@ -5,9 +5,21 @@ int main() {
     char* b = (char*) &a;
 
     for (int i = 0; i < 4; i++){
-        printf("%02X\n", b[i]);
+        printf("%02X ", b[i]);
     }
     
+    printf("\n\n");
 
+    int v[] = {1,4,9,1,2,5,7}; // vetores são ponteiros
+    int* p = v;
+
+    printf("addr -> %p\n", p);
+    printf("*p -> %d\n", *p);
+    
+    for (int i = 0; i < 7; i++){
+        printf("%d \n", *p);
+        p++;
+    }
+    
     return 0;
 }
