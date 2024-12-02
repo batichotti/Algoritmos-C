@@ -1,7 +1,27 @@
 #include <stdio.h>
+#include <limits.h>
 
 void reset(int* n){ // retorno via parâmetro
     *n = 0;
+}
+
+void swap(int* n, int* m){ // retorno via parâmetro
+    int temp = *n;
+    *n = *m;
+    *m = temp;
+}
+
+void min_and_max(int n, int v[], int* min, int* max){
+    *max = INT_MIN;
+    *min = INT_MAX;
+    for (int i = 0; i < n; i++){
+        if (v[i] > *max) {
+            *max = v[i];
+        }
+        if (v[i] < *min) {
+            *min = v[i];
+        }
+    }
 }
 
 int main(){
