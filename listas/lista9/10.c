@@ -15,15 +15,15 @@ struct rect{
 typedef struct rect Rect;
 
 void print_board(Rect *board){
-    for (int i = 0; i < (*board).x; i++){
+    for (int i = 0; i < board->x; i++){
         printf("\n");
     }
 
-    for (int i = 0; i < (*board).height; i++){
-        for (int espaco = 0; espaco < (*board).y; espaco++){
+    for (int i = 0; i < board->height; i++){
+        for (int espaco = 0; espaco < board->y; espaco++){
             printf("  ");
         }
-        for (int largura = 0; largura < (*board).width; largura++){
+        for (int largura = 0; largura < board->width; largura++){
             printf("░░");
         }
         printf("\n");

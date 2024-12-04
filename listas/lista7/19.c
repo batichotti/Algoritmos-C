@@ -19,9 +19,10 @@ int count_words(int n, int len, char lines[n][len]){
                 flag = 1;
             }
         }
-    }
-    if (flag == 1){
-        counter++;
+        if (flag == 1){
+            counter++;
+            flag = 0;
+        }
     }
 
     return counter;
