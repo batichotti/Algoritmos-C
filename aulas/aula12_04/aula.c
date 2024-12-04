@@ -16,6 +16,20 @@ void print_person(const Person* p){
     printf("{%d, %s}\n", p->id, p->nome);
 }
 
+void print_hello(){
+    printf("Hello!\n");
+}
+
+void for_each(int n, int* v, int (*fun)(int e)){
+    for (int i = 0; i < n; i++){
+        v[i] = fun(v[i]);
+    }
+}
+
+int sum_one(int i){
+    return i+1;
+}
+
 int main() {
 
     int a = 9;
@@ -57,5 +71,20 @@ int main() {
 
     vector_pp -= 10;
 
+    //Ponteiro de funções
+
+    void (*p_func)() = print_hello;
+    p_func();
+
+    void (*init_person)(Person* p) = set_person;
+    init_person(vector_pp);
+
+    int v1[] = {12,45,8};
+    for_each(3,v1,sum_one);
+    
+    for (int i = 0; i < 3; i++){
+        printf("%d\n", *(v1+i) );
+    }
+    
     return 0;
 }
