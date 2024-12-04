@@ -12,6 +12,10 @@ void set_person(Person* p){
     sprintf(p->nome, "Oscar");
 }
 
+void print_person(const Person* p){
+    printf("{%d, %s}\n", p->id, p->nome);
+}
+
 int main() {
 
     int a = 9;
@@ -47,9 +51,11 @@ int main() {
     set_person(vector_pp+4);
 
     for (int i = 0; i < 10; i++){
-        printf("{%d, %s}\n", vector_pp->id, vector_pp->nome);
+        print_person(vector_pp);
         vector_pp++;
     }
+
+    vector_pp -= 10;
 
     return 0;
 }
