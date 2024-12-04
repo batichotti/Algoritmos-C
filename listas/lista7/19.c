@@ -16,7 +16,7 @@ int count_words(int n, int len, char lines[n][len]){
                 flag = 0;
             }
             if (lines[j][i] != ' ' && flag == 0){
-                flag == 1;
+                flag = 1;
             }
         }
     }
