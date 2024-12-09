@@ -15,12 +15,12 @@ struct rect{
 typedef struct rect Rect;
 
 void print_board(Rect *board){
-    for (int i = 0; i < board->x; i++){
+    for (int i = 0; i < board->y; i++){
         printf("\n");
     }
 
     for (int i = 0; i < board->height; i++){
-        for (int espaco = 0; espaco < board->y; espaco++){
+        for (int espaco = 0; espaco < board->x; espaco++){
             printf("  ");
         }
         for (int largura = 0; largura < board->width; largura++){
