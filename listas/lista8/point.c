@@ -33,6 +33,15 @@ void distance_vector(int n, Point v[]){
     }
 }
 
+void random_points(int n, Point v[n]){
+    for (int i = 0; i < n; i++){
+        int x = rand() % 50;
+        int y = rand() % 50;
+        Point p = {x, y};
+        v[i] = p;
+    }
+}
+
 int main(){
     Point p0 = {6.66, 3.14159265359278};
 
@@ -50,5 +59,10 @@ int main(){
 
     Point vp[10];
     random_points(10, vp);
+
+    for (int i = 0; i < 10; i++){
+        print_point(vp[i]);
+    }
+    
     return 0;
 }
