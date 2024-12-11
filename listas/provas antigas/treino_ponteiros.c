@@ -31,7 +31,6 @@ void replace_email_extension(Contato* c, char email[15]){
 }
 
 int main(){
-
     Contato c1 = {1, "Pablo", "pablo@gmail.com"};
     replace_email_extension(&c1, "hotmail.com");
     print_contato(&c1);
