@@ -1,4 +1,9 @@
 #include <stdio.h>
+/*
+Modifique a função do exercício anterior para que receba o endereço de vetor de Point. A função
+deve imprimir todos os pontos dentro do tablado, seguindo as mesmas orientações do exercício
+mencionado.
+*/
 
 struct rect {
     int x;
