@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/*
+Escreva uma função que recebe as dimensões e o endereço de uma matriz (vetor bidimensional).
+A função deve imprimir seu conteúdo, sem utilizar o operador de índice [ ] para acessar os
+elementos da matriz.
+*/
 void print_vector2D(int rows, int cols, const int* v){
     int elem = 0;
     for (int i = 0; i < rows; i++){
