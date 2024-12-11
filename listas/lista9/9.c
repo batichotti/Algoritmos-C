@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
+/*
+Escreva uma função que recebe o endereço de uma string str e de um vetor de strings words (de
+até 49 caracteres). A função deve devolver o endereço da string de words que seja mais similar à
+str, isto é, com a menor distância de Hamming. OBS: faça chamadas à função do exercício anterior
+para encontrar as distâncias entre str e cada uma das palavras em words.
+*/
 
 int get_hamming_distance(const char* str1, const char* str2){
     int hamming = 0;
