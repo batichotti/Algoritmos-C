@@ -28,6 +28,11 @@ int* create(int n){
     return pointer;
 }
 
+int** create2(int rows, int cols){ // cria matriz
+    int** v = malloc(rows * sizeof(int*));
+    return v;
+}
+
 int main(int argc, char const *argv[]){
     int* p;
 
@@ -43,6 +48,10 @@ int main(int argc, char const *argv[]){
     // printf("%c", p[2]); // Retorna segmentation fault
 
     // Sintoma comum de memory leak: só aumentar a memória utilizada
+
+    // for (int i = 0; i < 50000; i++){
+    //     int* v = create(100*i);
+    // }
 
     return 0;
 }
