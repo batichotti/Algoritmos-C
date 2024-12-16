@@ -10,7 +10,7 @@ char* fn(int amount){
     char* p = malloc(amount * 1000000 * sizeof(char));
 
     for (int i = 0; i < amount*1000000; i++){
-        p[i] = 'g';
+        p[i] = i % 126 + 1;
     }
 
     return p;
@@ -21,24 +21,28 @@ int* create(int n){
 
     pointer = malloc(n * sizeof(int));
 
+    for (int i = 0; i < n; i++){
+        pointer[i] = 0;
+    }
+
     return pointer;
 }
 
 int main(int argc, char const *argv[]){
-    char* p;
-    p = fn(100);
+    int* p;
 
-    printf("%c", p[2]);
+    int n = 10;
+    p = create(n);
 
-    int* p = create(10);
-
-    int* newp = kalloc();
-
-    int* newnewp = realloc(p, 15*sizeof(int));
-
+    for (int i = 0; i < n; i++){
+        printf("%p -> %d\n", (p+i), *(p+i));
+    }
+    
     free(p);
     p = NULL; // Boa prática (anular ponteiro depois do free)
     // printf("%c", p[2]); // Retorna segmentation fault
+
+    // Sintoma comum de memory leak: só aumentar a memória utilizada
 
     return 0;
 }
