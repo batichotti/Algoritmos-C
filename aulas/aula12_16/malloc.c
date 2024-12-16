@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 // Malloc aloca memória na heap
+// Malloc é utilizado quando se precisa criar algo dentro de uma função e manter vivo até fora deste escopo de criação
 // MALLOC PRECISA ESTAR VINCULADO A UM PONTEIRO
 
 char* fn(int amount){
@@ -16,7 +17,7 @@ char* fn(int amount){
 
 int main(int argc, char const *argv[]){
     char* p;
-    p = fn(10);
+    p = fn(100);
 
     printf("%c", p[2]);
     free(p);
