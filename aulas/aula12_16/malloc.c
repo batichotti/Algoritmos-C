@@ -15,6 +15,14 @@ char* fn(int amount){
     return p;
 }
 
+int* create(int n){
+    int* pointer;
+
+    pointer = malloc(n * sizeof(int));
+
+    return pointer;
+}
+
 int main(int argc, char const *argv[]){
     char* p;
     p = fn(100);
