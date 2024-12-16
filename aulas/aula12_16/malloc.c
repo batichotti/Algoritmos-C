@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// Malloc aloca memória na heap
 // MALLOC PRECISA ESTAR VINCULADO A UM PONTEIRO
 
 char* fn(int amount){
