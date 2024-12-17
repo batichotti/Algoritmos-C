@@ -30,6 +30,10 @@ int* create(int n){
 
 int** create2(int rows, int cols){ // cria matriz
     int** v = malloc(rows * sizeof(int*));
+    for (int i = 0; i < rows; i++){
+        v[i] = malloc(cols * sizeof(int));
+    }
+    
     return v;
 }
 
