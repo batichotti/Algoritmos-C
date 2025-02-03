@@ -11,6 +11,12 @@ int* create_integer_array(int size){
     return v; //endereço do primeiro byte do inteiro
 }
 
+void print_array(int n, int* p){
+    for (int i = 0; i < n; i++){
+        printf("%d\n", *(p+i)); // mesma coisa que p[i]
+    }
+}
+
 int main(int argc, char const *argv[]){
     int p_deprec[] = {1,2,3,4}; // ponteiro some junto ao seu frame
     int* p = (int*) malloc(10*sizeof(int)); // alocação manual na heap
@@ -19,10 +25,7 @@ int main(int argc, char const *argv[]){
 
     int size = 10;
     p = create_integer_array(size);
-
-    for (int i = 0; i < size; i++){
-        printf("%d @ %p\n", *(p+i), p+i);
-    }
+    print_array(size, p);
 
     return 0;
 }
