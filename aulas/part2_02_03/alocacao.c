@@ -26,6 +26,7 @@ int main(int argc, char const *argv[]){
     int size = 10;
     p = create_integer_array(size);
     print_array(size, p);
+    free(p);
 
     return 0;
 }
