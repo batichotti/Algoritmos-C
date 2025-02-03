@@ -17,7 +17,7 @@ int main(int argc, char const *argv[]){
 
     char c = fgetc(file);
     for (size_t i = 0; c != EOF ; i++){ // EOF == -1
-        printf("%c", c); // ponteiro do SO faz isso funcionar
+        printf("%c", c); // cursor do SO faz isso funcionar
         c = fgetc(file);
     }
 
