@@ -28,5 +28,7 @@ int main(int argc, char const *argv[]){
     print_array(size, p);
     free(p);
 
+    p = NULL;
+
     return 0;
 }
