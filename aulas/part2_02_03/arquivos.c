@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]){
     printf("INFO: Arquivo aberto com sucesso!\n\n");
 
     char c = fgetc(file);
-    for (size_t i = 0; c != EOF ; i++){ // EOF == -1
+    for (int i = 0; c != EOF ; i++){ // EOF == -1
         printf("%c", c); // cursor do SO faz isso funcionar
         c = fgetc(file);
     }
