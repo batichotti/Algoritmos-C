@@ -22,13 +22,12 @@ int main(int argc, char const *argv[]){
     int* p = (int*) malloc(10*sizeof(int)); // alocação manual na heap
     free(p); // libera a memória alocada
 
-
     int size = 10;
     p = create_integer_array(size);
     print_array(size, p);
     free(p);
 
-    p = NULL;
+    p = NULL; // Boa prática
 
     return 0;
 }
