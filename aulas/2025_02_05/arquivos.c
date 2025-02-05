@@ -12,10 +12,14 @@ int main(int argc, char const *argv[]) {
     char* path = "texto.txt";
     file = fopen(path, "w");
     //cada caractere é igual a um byte
-    // fgetc(file) -> obtem o caractere do cursor
+    // fgetc(file) -> obtem o caractere do cursor (retorna EOF se der merda)
     //fputc(char, file) -> escrever um caractere
     //fseek(file, offset [bytes], ref [SEEK_SET, SEEK_END, SEEK_CUR]) -> move o cursor
     //ftell(file) -> informa onde está o cursor
+    //fgets(vector/buffer, vector_size, file)  -> le n-1 chars da entrada até \n, coloca no buffer e adiciona \0 no final (retorna NULL se der merda)
+    //fputs(text, file) -> Escreve string
+    //fprintf(file, strf, values_f) -> printf para escrever em arquivos (se file for stdout vc imprime no terminal)
+    //rewind(file) -> SEEK_SET
 
     if (file == NULL){
         printf("ERRO: Acesso ao local de escrita do arquivo inválido.");
