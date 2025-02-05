@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-long getTextSize(FILE* file){
+long get_text_size(FILE* file){
     fseek(file, 0, SEEK_END);
     return ftell(file);
 }
@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
         fputc(text_to_replace[i], file);
     }
 
-    printf("File created with %ld bytes", getTextSize(file));
+    printf("File created with %ld bytes", get_text_size(file));
     fclose(file);
 
     return 0;
