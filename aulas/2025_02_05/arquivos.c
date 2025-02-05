@@ -20,6 +20,7 @@ int main(int argc, char const *argv[]) {
     //fputs(text, file) -> Escreve string
     //fprintf(file, strf, values_f) -> printf para escrever em arquivos (se file for stdout vc imprime no terminal)
     //rewind(file) -> SEEK_SET
+    //fcanf(file, str, &vars) -> lê os dados de uma string formatada
 
     if (file == NULL){
         printf("ERRO: Acesso ao local de escrita do arquivo inválido.");
