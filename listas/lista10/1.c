@@ -19,5 +19,6 @@ int main(int argc, char const *argv[]){
         printf("p[%d] = %d\n", i, *(p+i));
     }
     
+    free(p);
     return 0;
 }
