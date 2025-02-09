@@ -7,8 +7,10 @@ int file_exists(const char* filepath){
     file = fopen(filepath, "r");
 
     if (file == NULL){
+        fclose(file);
         return 0;
     } else {
+        fclose(file);
         return 1;
     }
 }

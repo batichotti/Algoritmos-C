@@ -7,8 +7,10 @@ int check_or_create(const char *filepath){
     FILE* file = fopen(filepath, "a");
 
     if (file == NULL){
+        fclose(file);
         return 0;
     } else {
+        fclose(file);
         return 1;
     }
     
