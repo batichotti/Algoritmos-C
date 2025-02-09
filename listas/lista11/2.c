@@ -4,7 +4,7 @@
 // criado e, 0 (zero), caso contrário.
 
 int check_or_create(const char *filepath){
-    FILE* file = fopen(filepath, "a+");
+    FILE* file = fopen(filepath, "a");
 
     if (file == NULL){
         return 0;
