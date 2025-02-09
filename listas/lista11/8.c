@@ -8,26 +8,32 @@ char* get_content(const char *filepath){
     FILE* file = fopen(filepath, "r");
     if (file == NULL){
         return NULL;
-    } else {
-        int size = ftell(file);
-        rewind(file);
-        char* p = (char*) malloc((size+1) * sizeof(char));
-        int i;
-        char c = fgetc(file);
-        for (i = 0; c != EOF ; i++){
-            p[i] = c;
-        }
-        p[i] = 0;
-
-        fclose(file);
-        return p;
     }
-    
+    fseek(file, 0, SEEK_END);
+    int size = ftell(file);
+    rewind(file);
+    char* p = (char*) malloc((size+1) * sizeof(char));
+    int i;
+    char c = fgetc(file);
+    for (i = 0; c != EOF ; i++){
+        p[i] = c;
+        c = fgetc(file);
+    }
+    p[i] = 0;
+
+    fclose(file);
+    return p;
 }
 
 int main(int argc, char const *argv[]){
 
     char* p = get_content("kakaroto.txt");
     
+    for(int i = 0; p[i]!= 0;i++){
+        printf("%c", *(p+i));
+    }
+
+    free(p);
+
     return 0;
 }
