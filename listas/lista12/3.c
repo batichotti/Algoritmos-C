@@ -26,7 +26,7 @@ void report_by_chars(const char* filepath){
 
     for (int i = 0; i < 255; i++){
         if (letras[i] != 0){
-            printf("Letras %d: %d\n", i, letras[i]);
+            printf("%d letra(s): %d\n", i, letras[i]);
         }
     }
     
