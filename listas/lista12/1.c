@@ -4,7 +4,7 @@
 
 int count_word(const char* filepath, const char* word){
 
-    FILE *file = fopen(filepath, "r");
+    FILE* file = fopen(filepath, "r");
     if (file == NULL) {
         return 0;
     }
