@@ -1,31 +1,31 @@
 #include <stdio.h>
+#include <string.h>
 // Escreva uma função que conta todas as ocorrências de uma dada palavra, em um arquivo.
 
 int count_word(const char* filepath, const char* word){
 
-    int flag = 0;
-    int idx = 0;
-    int count = 0;
-    int size;
-    for(size = 0; word[size] != 0;size++){}
-    FILE* file = fopen(filepath, "r");
-    char c = (fgetc(file));
-    while(c != EOF){
-        if (c == word[idx] && flag == 0){
-            flag = 1;
-            idx++;
-        } else if(flag == 1 && c != word[idx]){
-            flag = 0;
-            if (idx == ){
-                /* code */
-            }
-            
-        }
-        
+    FILE *file = fopen(filepath, "r");
+    if (file == NULL) {
+        return 0;
     }
+
+    int count = 0;
+    char buffer[256];
+
+    while (fscanf(file, "%255s", &buffer) == 1) {
+        if (strcmp(buffer, word) == 0) {
+            count++;
+        }
+    }
+
+    fclose(file);
+    return count;
 }
 
-int main(int argc, char const *argv[]){
-    
+int main() {
+    const char *filename = "teste.txt";
+    const char *word = "maneskin";
+    int occurrences = count_word(filename, word);
+    printf("A palavra '%s' ocorre %d vezes no arquivo.\n", word, occurrences);
     return 0;
 }
