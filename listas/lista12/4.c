@@ -41,7 +41,7 @@ void count_all_words(const char* filepath) {
                 break;
             }
         }
-        if (!found) {
+        if (found == 0) {
             strcpy(words[wcount].text, buffer);
             words[wcount].count = 1;
             wcount++;
