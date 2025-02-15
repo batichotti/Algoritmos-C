@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Estrutura para armazenar cada palavra e sua contagem
 struct Word {
     char text[256];
     int count;
