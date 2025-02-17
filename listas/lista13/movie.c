@@ -19,7 +19,10 @@ void write_all_movies(const char* filepath, const Movie* list, int n){
 // Escreva uma função que retorna a quantidade de registros de filmes contidos em um arquivo.
 int count_movies(const char* filepath){
     FILE* file = fopen(filepath, "r");
-    
+    fseek(file, 0, SEEK_END);
+    int byte_size = ftell(file);
+    fclose(file);
+    return (int) byte_size/sizeof(Movie);
 }
 
 int main(int argc, char const *argv[]){
@@ -35,6 +38,6 @@ int main(int argc, char const *argv[]){
 
     write_all_movies("movies.bin", list,7);
 
-
+    printf("%d", count_movies("movies.bin"));
     return 0;
 }
