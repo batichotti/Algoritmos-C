@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 // Para os exercícios que seguem, considere o tipo estruturado Movie, que deverá ser utilizado para
 // manipular arquivos de registros de filmes:
 typedef struct {
@@ -14,15 +15,19 @@ void write_all_movies(const char* filepath, const Movie* list, int n){
     }
     
     fwrite(list, sizeof(Movie), n, file);
+    fclose(file);
 }
 
 // Escreva uma função que retorna a quantidade de registros de filmes contidos em um arquivo.
 int count_movies(const char* filepath){
     FILE* file = fopen(filepath, "r");
+    if (file == NULL){
+        return -1;
+    }
     fseek(file, 0, SEEK_END);
-    int byte_size = ftell(file);
+    long byte_size = ftell(file);
     fclose(file);
-    return (int) byte_size/sizeof(Movie);
+    return (int) (byte_size/sizeof(Movie));
 }
 
 int main(int argc, char const *argv[]){
@@ -36,8 +41,9 @@ int main(int argc, char const *argv[]){
         {7, "Village of the Damned"}
         };
 
-    write_all_movies("movies.bin", list,7);
 
-    printf("%d", count_movies("movies.bin"));
+    char path[] = "movies";
+    write_all_movies(path, list,7);
+    printf("%d", count_movies(path));
     return 0;
 }
