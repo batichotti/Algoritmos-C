@@ -18,7 +18,7 @@ int** create_vector2D(int m, int n){
     }
 
     int v = 0;
-    for(int i = 0; i < m;i++){
+    for(int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
             p[i][j] = v;
             v++;
