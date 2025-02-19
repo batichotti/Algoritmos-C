@@ -82,6 +82,22 @@ int find_movie(const char* filepath, int id){
 // retornar 1 (true) para sucesso ou 0 (false) em caso de erro. OBS: você não deve trazer todos os
 // registros para a RAM, em um array.
 int add_movie(const char* filepath, const Movie* movie){
+    FILE* file = fopen(filepath, "a");
+    if (file == NULL){
+        return 0;
+    }
+
+    fwrite(movie, sizeof(Movie), 1, file);
+
+    fclose(file);
+    return 1;
+}
+
+// Escreva uma função que grava um registro em um arquivo de filmes a partir de seu ID (Movie::id),
+// substituindo o existente. A função deve retornar 1 (true) para sucesso ou 0 (false), em caso de erro
+// ou ID inexistente. OBS: você não deve trazer todos os registros para a RAM, em um array. A
+// função deve acessar somente o registro especificado.
+int update_movie(const char* filepath, const Movie* movie){
     
 }
 
@@ -99,10 +115,13 @@ int main(int argc, char const *argv[]){
 
     char path[] = "movies";
     write_all_movies(path, list,7);
-    printf("%d\n", count_movies(path));
+    printf("Total de filmes em registro: %d\n", count_movies(path));
     int pos = 2;
     Movie movie = read_movie(path, pos);
     printf("%d - Filme de ID <%d>: <%s>\n", pos, movie.id, movie.name);
     printf("Posição do Filme com ID: <%d> = <%d>\n", 23, find_movie(path, 23));
+    Movie new_movie = {13, "Drive My Car"};
+    add_movie(path, &new_movie);
+    printf("Total de filmes em registro: %d\n", count_movies(path));
     return 0;
 }
