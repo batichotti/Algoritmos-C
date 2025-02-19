@@ -21,6 +21,8 @@ int main(int argc, char const *argv[]) {
     //fprintf(file, strf, values_f) -> printf para escrever em arquivos (se file for stdout vc imprime no terminal)
     //rewind(file) -> SEEK_SET
     //fscanf(file, str, &vars) -> lê os dados de uma string formatada
+    // fread(&addr, sizeof(type), amount, FILE*) -> lê qualquer coisa em um arquivo
+    //fwrite(&addr, sizeof(type), amount, FILE*) -> escreve qualquer coisa em um arquivo
 
     if (file == NULL){
         printf("ERRO: Acesso ao local de escrita do arquivo inválido.");
