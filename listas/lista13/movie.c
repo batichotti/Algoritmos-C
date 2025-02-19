@@ -78,6 +78,13 @@ int find_movie(const char* filepath, int id){
     return -1;
 }
 
+// Escreva uma função que adiciona um registro ao final de um arquivo de filmes. A função deve
+// retornar 1 (true) para sucesso ou 0 (false) em caso de erro. OBS: você não deve trazer todos os
+// registros para a RAM, em um array.
+int add_movie(const char* filepath, const Movie* movie){
+    
+}
+
 int main(int argc, char const *argv[]){
     Movie list[] = {
         {6, "They Live"},
