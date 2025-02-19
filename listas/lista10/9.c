@@ -28,7 +28,12 @@ int** create_vector2D(int m, int n){
 }
 
 int main(int argc, char const *argv[]){
-    int** p = create_vector2D(3,4);
+    int** p = (int**)create_vector2D(3,4);
     print_vector2D(3,4,p);
+
+    for(int i = 0; i < 3;i++){
+        free(*(p+i));
+    }
+    free(p);
     return 0;
 }
