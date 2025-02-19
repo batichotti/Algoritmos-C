@@ -31,6 +31,20 @@ int count_movies(const char* filepath){
     return (int) (byte_size/sizeof(Movie));
 }
 
+void show_all_movies(const char* filepath){
+    FILE* file = fopen(filepath, "r");
+    if (file == NULL){
+        printf("Deu merda\n");
+    } else {
+        int count = count_movies(filepath);
+        for (int i = 0; i < count; i++){
+            Movie mv;
+            fread(&mv, sizeof(Movie), 1, file);
+            printf("ID: %d\nTitle: %s\n", mv.id, mv.name);
+        }
+    }
+}
+
 // Escreva uma função que lê um registro de filme de um arquivo, na posição indicada (0, 1, 2, …). A
 // função deve retornar uma cópia do registro. Se a posição for inválida, a função deve retornar um
 // registro preenchido com zeros. OBS: você não deve trazer todos os registros para a RAM, em um
@@ -98,7 +112,39 @@ int add_movie(const char* filepath, const Movie* movie){
 // ou ID inexistente. OBS: você não deve trazer todos os registros para a RAM, em um array. A
 // função deve acessar somente o registro especificado.
 int update_movie(const char* filepath, const Movie* movie){
-    
+    FILE* file = fopen(filepath, "r+");
+    if (file == NULL){
+        return 0;
+    }
+
+    int id_orig = movie->id;
+    int pos = find_movie(filepath, id_orig);
+
+    fwrite(movie, sizeof(Movie), 1, file);
+
+    fclose(file);
+    return 1;
+}
+
+// Escreva uma função que remove um registro em um arquivo de filmes, a partir de seu ID
+// (Movie::id). A função não apaga os dados do registro, mas apenas marca-o como removido,
+// definindo ID = -1. A função deve retornar 1 (true) para sucesso ou 0 (false) em caso de erro. OBS:
+// você não deve trazer todos os registros para a RAM, em um array. A função deve acessar somente
+// o registro especificado.
+int delete_movie(const char* filepath, int id){
+    FILE* file = fopen(filepath, "r+");
+    if (file == NULL){
+        return 0;
+    }
+
+    int pos = find_movie(filepath, id);
+
+    Movie mv = {-1, "Deleted"};
+    fseek(file, pos*sizeof(Movie), SEEK_SET);
+    fwrite(&mv, sizeof(Movie), 1, file);    
+    rewind(file);
+    fclose(file);
+    return 1;
 }
 
 int main(int argc, char const *argv[]){
@@ -123,5 +169,9 @@ int main(int argc, char const *argv[]){
     Movie new_movie = {13, "Drive My Car"};
     add_movie(path, &new_movie);
     printf("Total de filmes em registro: %d\n", count_movies(path));
+    Movie newest_movie = {6, "Ran"};
+    update_movie(path, &newest_movie);
+    delete_movie(path, 11);
+    show_all_movies(path);
     return 0;
 }
